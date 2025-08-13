@@ -13,4 +13,4 @@ COPY . .
 RUN python manage.py collectstatic --no-input
 
 
-CMD ["gunicorn", "--chdir", "/app", "docker.wsgi:application", "--bind", "0.0.0.0:8000"]
+CMD ["gunicorn", "--chdir", "/app", "project.wsgi:application", "--bind", "0.0.0.0:8000"]
